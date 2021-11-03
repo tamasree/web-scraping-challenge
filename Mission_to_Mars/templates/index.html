@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mars_News</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+    <div class="container-fluid" style="margin:10px;">
+        <div class="jumbotron text-center" style="height:15%;">
+            <h1>Mission to Mars</h1>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data!</a></p>
+        </div>
+
+        <div class='row' style="margin-left:6px; margin-top:2px; padding:5px;">
+            <h3>Latest Mars News</h3>
+            <h4>{{destination_data.news_title}}</h4>
+            <p>
+            <h5>{{destination_data.news_p}}</h5>
+            </p>
+        </div>
+        <div class='row'>
+            <div class='col-md-7 col-sm-7'>
+                <img src="{{destination_data.featured_image_url}}" class='img-thumbnail img-fluid'
+                    style="width:400px; height:250px;" alt="Mars_Featured_Image">
+
+            </div>
+            <div class='col-lg-5'>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Mars Facts</h3>
+                        {{destination_data.fact_table | safe}}
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 offset-5">
+                <h2 style="text-align: center;"><u>Mars Hemispheres</u></h2>
+                <hr />
+            </div>
+        </div>
+        <div class="row">
+            <div class=" col-md-3 col-sm-3">
+                <img src={{destination_data.hemisphere_images[0].img_url}} class="img-thumbnail img-fluid"
+                    alt="Cerberus Hemisphere">
+                <p>
+                <h3 style="text-align: center;">{{destination_data.hemisphere_images[0].title}}</h3>
+                </p>
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <img src={{destination_data.hemisphere_images[1].img_url}} class="img-thumbnail img-fluid"
+                    alt="Schiaparelli Hemisphere">
+                <p>
+                <h3 style="text-align: center;">{{destination_data.hemisphere_images[1].title}}</h3>
+                </p>
+
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <img src={{destination_data.hemisphere_images[2].img_url}} class="img-thumbnail img-fluid"
+                    alt="Syrtis Major Hemisphere">
+                <p>
+                <h3 style="text-align: center;">{{destination_data.hemisphere_images[2].title}}</h3>
+                </p>
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <img src={{destination_data.hemisphere_images[3].img_url}} class="img-thumbnail img-fluid"
+                    alt="Valles Marineris Hemisphere">
+                <p>
+                <h3 style="text-align: center;">{{destination_data.hemisphere_images[3].title}}</h3>
+                </p>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</body>
+
+</html>
