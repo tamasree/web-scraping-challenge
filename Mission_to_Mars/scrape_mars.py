@@ -43,14 +43,15 @@ def scrape_info():
     url = 'https://galaxyfacts-mars.com/'
     tables = pd.read_html(url)
     df = tables[0]
-    df.rename(columns={0: 'Mars - Earth Comparison',
+    df.rename(columns={0: 'Description',
                        1: 'Mars',
                        2: 'Earth'}, inplace=True)
 
-    df = df.iloc[1:, :]
-    df.set_index('Mars - Earth Comparison', inplace=True)
+    df.set_index('Description', inplace=True)
+
     html_table = df.to_html()
     html_table.replace('\n', '')
+    html_table.replace('class="dataframe"', 'class="table table-striped"')
 
     #scrapping hemisphere image and title#
     url = 'https://marshemispheres.com/'

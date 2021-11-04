@@ -6,52 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mars_News</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="static/style.css">
+
 
 </head>
 
 <body>
-    <div class="container-fluid" style="margin:10px;">
-        <div class="jumbotron text-center" style="height:15%;">
+    <div class="container-fluid" style="margin:20px;">
+        <div class="jumbotron text-center" style="height:15%; background-color:tomato;">
             <h1>Mission to Mars</h1>
             <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data!</a></p>
         </div>
 
-        <div class='row' style="margin-left:6px; margin-top:2px; padding:5px;">
-            <h3>Latest Mars News</h3>
-            <h4>{{destination_data.news_title}}</h4>
-            <p>
-            <h5>{{destination_data.news_p}}</h5>
-            </p>
+        <div class='row' style="margin-top:2px;">
+
+            <div class="col-md-12">
+                <h3 style="color: blue;">Latest Mars News</h3>
+            </div>
         </div>
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <h4>{{destination_data.news_title}}</h4>
+
+                <p>
+                <h5>{{destination_data.news_p}}</h5>
+                </p>
+
+            </div>
+        </div>
+
+
+
+
         <div class='row'>
-            <div class='col-md-7 col-sm-7'>
+            <!-- printing featured image -->
+            <div class='col-md-5 col-sm-5' style="padding-left: 10%;">
                 <img src="{{destination_data.featured_image_url}}" class='img-thumbnail img-fluid'
-                    style="width:400px; height:250px;" alt="Mars_Featured_Image">
+                    style="width:500px; height:300px;" alt="Mars_Featured_Image">
 
             </div>
-            <div class='col-lg-5'>
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title">Mars Facts</h3>
+
+            <!--printing table-->
+            <div class='col-md-7 col-sm-7' style="padding:5px;">
+                <div class="container">
+                    <div class="box">
+                        <h4 style="color: blue;text-align:left; padding-top: 5px;">Mars Facts</h4>
+                        <div class="table-responsive"
+                            style="overflow-x:auto; overflow-y:auto; max-height:470px; max-width: auto;"></div>
+                        <!-- <div class="border" style="margin: 5px;"> -->
                         {{destination_data.fact_table | safe}}
+
+                        <!-- </div> -->
                     </div>
-
                 </div>
-
-
-
-
             </div>
         </div>
+
+
         <div class="row">
-            <div class="col-md-12 offset-5">
-                <h2 style="text-align: center;"><u>Mars Hemispheres</u></h2>
-                <hr />
+
+            <div class="col-md-12">
+                <h2 style="text-align: center; color:blue;"><u>Mars hemispheres</u></h2>
+
             </div>
+            <hr>
+
         </div>
-        <div class="row">
+
+
+        <div class="row" style="padding: 5px;">
             <div class=" col-md-3 col-sm-3">
                 <img src={{destination_data.hemisphere_images[0].img_url}} class="img-thumbnail img-fluid"
                     alt="Cerberus Hemisphere">
@@ -87,6 +117,17 @@
 
 
     </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

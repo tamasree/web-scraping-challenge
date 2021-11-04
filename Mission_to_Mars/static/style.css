@@ -1,0 +1,9 @@
+
+table, th, td {
+    border: 1px solid black!important;
+  }
+
+.table th td {
+    text-align: center !important;
+    border: 1px solid black!important;
+    } 
