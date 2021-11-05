@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup as bs
 import time
 from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
+import time
 
 
 #browser set up#
@@ -19,6 +20,8 @@ def scrape_info():
     url = 'https://redplanetscience.com/'
     browser.visit(url)
 
+    time.sleep(1)
+
     html = browser.html
     soup = bs(html, 'html.parser')
 
@@ -31,6 +34,8 @@ def scrape_info():
     #scrapping image#
     url = 'https://spaceimages-mars.com/'
     browser.visit(url)
+
+    time.sleep(1)
 
     html = browser.html
     soup = bs(html, 'html.parser')
@@ -56,6 +61,8 @@ def scrape_info():
     #scrapping hemisphere image and title#
     url = 'https://marshemispheres.com/'
     browser.visit(url)
+
+    time.sleep(1)
 
     html = browser.html
     soup = bs(html, 'html.parser')
