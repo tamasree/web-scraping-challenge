@@ -56,14 +56,16 @@
             <!--printing table-->
             <div class='col-md-7 col-sm-7' style="padding:5px;">
                 <div class="container">
-                    <div class="box">
+                    <div class="box" style="margin-left: 50px;">
                         <h4 style="color: blue;text-align:left; padding-top: 5px;">Mars Facts</h4>
-                        <div class="table-responsive"
-                            style="overflow-x:auto; overflow-y:auto; max-height:470px; max-width: auto;"></div>
-                        <!-- <div class="border" style="margin: 5px;"> -->
+                        <div class="table-responsive table-striped "
+                            style="overflow-x:auto; overflow-y:auto; max-height:470px; max-width: auto;">
+                            {{destination_data.fact_table | safe}}
+                        </div>
+                        <!-- <div class="border" style="margin: 5px;"> 
                         {{destination_data.fact_table | safe}}
 
-                        <!-- </div> -->
+                        </div> -->
                     </div>
                 </div>
             </div>

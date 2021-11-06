@@ -25,11 +25,8 @@ def scrape_info():
     html = browser.html
     soup = bs(html, 'html.parser')
 
-    all_text = soup.find_all('div', class_='list_text')
-
-    for item in all_text:
-        news_title = item.find('div', class_='content_title').text
-        news_p = item.find('div', class_='article_teaser_body').text
+    news_title = soup.find('div', class_='content_title').text
+    news_p = soup.find('div', class_='article_teaser_body').text
 
     #scrapping image#
     url = 'https://spaceimages-mars.com/'
