@@ -18,9 +18,12 @@ collection = db.mars_details
 
 @app.route("/")
 def home():
+    scrape()
 
     # Find one record of data from the mongo database
     destination_data = collection.find_one()
+
+    print(destination_data)
 
     # Return template and data
     return render_template("index.html", destination_data=destination_data)
