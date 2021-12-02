@@ -10,7 +10,7 @@ In this small project, a web application was build that scraped various websites
 
 ### NASA Mars News
 
-* Scrape the [Mars News Site](https://redplanetscience.com/) and collect the latest News Title and Paragraph Text. Assign the text to variables that you can reference later.
+* The [Mars News Site](https://redplanetscience.com/) was scraped to collect the latest News Title and Paragraph Text. The text  was assigned to variables that was referenced later.
 
 ```python
 # Example:
@@ -20,6 +20,8 @@ news_p = "Preparation of NASA's next spacecraft to Mars, InSight, has ramped up 
 ```
 
 ### JPL Mars Space Images - Featured Image
+
+Following steps were followed:
 
 * Visit the url for the Featured Space Image site [here](https://spaceimages-mars.com).
 
@@ -36,11 +38,15 @@ featured_image_url = 'https://spaceimages-mars.com/image/featured/mars2.jpg'
 
 ### Mars Facts
 
+Following steps were followed:
+
 * Visit the Mars Facts webpage [here](https://galaxyfacts-mars.com) and use Pandas to scrape the table containing facts about the planet including Diameter, Mass, etc.
 
 * Use Pandas to convert the data to a HTML table string.
 
 ### Mars Hemispheres
+
+Following steps were followed:
 
 * Visit the astrogeology site [here](https://marshemispheres.com/) to obtain high resolution images for each of Mar's hemispheres.
 
@@ -64,6 +70,8 @@ hemisphere_image_urls = [
 
 ## Step 2 - MongoDB and Flask Application
 
+Following steps were followed:
+
 Use MongoDB with Flask templating to create a new HTML page that displays all of the information that was scraped from the URLs above.
 
 * Start by converting your Jupyter notebook into a Python script called `scrape_mars.py` with a function called `scrape` that will execute all of your scraping code from above and return one Python dictionary containing all of the scraped data.
@@ -76,7 +84,9 @@ Use MongoDB with Flask templating to create a new HTML page that displays all of
 
 * Create a template HTML file called `index.html` that will take the mars data dictionary and display all of the data in the appropriate HTML elements. Use the following as a guide for what the final product should look like, but feel free to create your own design.
 
-![final_app_part1.png](Images/final_app.png)
+![images](Images/Screen Shot 2021-11-03 at 5.48.11 PM.png)
+![images](Images/Screen Shot 2021-11-03 at 5.48.58 PM.png)
+![images](Images/Screen Shot 2021-11-03 at 5.49.18 PM.png)
 
 - - -
 
