@@ -102,5 +102,5 @@ Use MongoDB with Flask templating to create a new HTML page that displays all of
 * Use Bootstrap to structure your HTML template.
 
 ## Contact Info
-*[Linkedin Link](https://www.linkedin.com/in/tamasree-sinha/)
+* [Linkedin Link](https://www.linkedin.com/in/tamasree-sinha/)
 * email id: tamasree.g@gmail.com
