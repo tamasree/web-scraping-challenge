@@ -90,30 +90,14 @@ Use MongoDB with Flask templating to create a new HTML page that displays all of
 
 - - -
 
-## Step 3 - Submission
-
-To submit your work to BootCampSpot, create a new GitHub repository and upload the following:
-
-1. The Jupyter Notebook containing the scraping code used.
-
-2. Screenshots of your final application.
-
-3. Submit the link to your new repository to BootCampSpot.
-
-4. Ensure your repository has regular commits and a thorough README.md file
-
 ## Hints
 
 * Use Splinter to navigate the sites when needed and BeautifulSoup to help find and parse out the necessary data.
 
-* Use Pymongo for CRUD applications for your database. For this homework, you can simply overwrite the existing document each time the `/scrape` url is visited and new data is obtained.
+* Use Pymongo for CRUD applications for your database. For this work, you can simply overwrite the existing document each time the `/scrape` url is visited and new data is obtained.
 
 * Use Bootstrap to structure your HTML template.
 
-## Rubric
-
-[Unit 12 Rubric - Web Scraping Homework - Mission to Mars](https://docs.google.com/document/d/1paGEIFS5yp2VQu6G8F45B4uj1t1t29zL73KEQrD0xpo/edit?usp=sharing)
-
-- - -
-
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+## Contact Info
+*[Linkedin Link](https://www.linkedin.com/in/tamasree-sinha/)
+* email id: tamasree.g@gmail.com
